@@ -1,0 +1,163 @@
+@charset "utf-8";
+/***** CSS Document
+Use for:    国庆
+Version:    1.0
+Author:     dongge
+*/
+/** { CSS Reset **/
+html{font-size:10px;-webkit-text-size-adjust:100%;}
+body,div, dl, dt, dd , ul, ol, li ,h1, h2, h3 , h4, h5, h6 , form , fieldset, legend, input , button, textarea, p, blockquote , th, td{margin:0; padding:0;}
+body{font:1.2rem/1.4 "Heiti SC","Microsoft YaHei",Helvetica,"Helvetica Neue",sans-serif,Arial;background-color: #f0e0b6;}
+img {width: 100%; border: none;}
+input, img {vertical-align: middle;}
+h1, h2 , h3, h4, h5 , h6{ font-size:100% ;font-weight: normal;}
+ol, ul {list-style: none;}
+:link, :visited , ins{ text-decoration:none ;}
+a:focus{outline :0;text-decoration: none;}
+a {color: #383c3c; text-decoration: none;}
+.nowrap{white-space :nowrap;}
+.clearfix:after {content:"\0020";display:block;height:0;visibility:hidden;clear:both;}
+.clearfix {zoom:1;}
+/** CSS Reset } **/
+.wrap{margin:0 2rem}
+.article-top{padding-top:4rem}
+.title-content{
+    padding:1.2rem 2rem 1rem 2rem;
+    color: #514d4b;
+    font-size: 2.2rem;
+}
+.article-1 .title-content{
+    background-color: #ebfdfc;
+}
+.article-2 .title-content{
+    background-color: #f7ffdd;
+}
+.article-3 .title-content{
+    background-color: #fffbdd;
+}
+.article-4 .title-content{
+    background-color: #feeeef;
+}
+.product-box{
+    /*width:100%;*/
+}
+.product-img-box{
+    background:url(../images/loading.gif) 50% 50% no-repeat;
+    background-size:6.4rem 6.4rem;
+}
+.product-item{
+    width: 48%;
+    overflow: hidden;
+    float: left;
+    background-color: #fff;
+    margin-top: 2rem;
+}
+.product-item:nth-child(odd){
+    margin-right:4%;
+}
+.product-item img{
+    display: block;
+    width: 100%;
+}
+.item-name{
+    padding: 0.5rem 0;
+    font-size: 2.4rem;
+    height:6rem;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.item-content{
+    padding: 1rem;
+}
+.item-price{
+    text-align:left;
+}
+.item-content strong{
+    font-weight: normal;
+    color: #ff3933;
+    font-family: Arial;
+    font-size: 3.4rem;
+}
+.item-content span{
+    color: #a3a3a2;
+    font-size: 2.4rem;
+    float: right;
+    text-decoration: line-through;
+    padding-top:1rem;
+}
+.more-box{
+    padding-top: 4rem;
+    text-align: center;
+}
+.more-btn{
+    display: inline-block;
+    text-align: center;
+    width: 36rem;
+    height:7.6rem;
+    line-height:8rem;
+    background-color: #10dccb;
+    border-bottom:solid 0.4rem #0ec0b1;
+    color: #fff;
+    font-size: 3.6rem;
+    border-radius:0.4rem;
+    overflow: hidden;
+}
+.more-btn-green{
+    background-color: #4ad22f;
+    border-bottom: solid 0.4rem #54b130;
+}
+.more-btn-yellow{
+    background-color: #f8d801;
+    border-bottom: solid 0.4rem #e3c031;
+}
+.more-btn-pink{
+    background-color: #fd4b71;
+    border-bottom: solid 0.4rem #d05256;
+}
+.fixnav{
+    position: fixed;
+    left: 0;
+    bottom:0;
+    z-index:666;
+    width: 100%;
+    background:#f9edcd;
+    filter: Alpha(opacity=90);
+    opacity:0.9;
+    text-align:center;
+}
+.fixnav li{
+    width: 20%;
+    float: left;
+    padding: 2rem 0;
+}
+.fixnav li a{
+    color: #7b493f;
+    font-size: 2.4rem;
+    display: block;
+    text-align: center;
+    border-right: solid 0.2rem #aba38d;
+    font-weight: bold;
+}
+.fixnav li:last-child a{
+    border: 0;
+    font-size: 0;
+}
+.fixnav li:last-child img{
+    width:3.2rem;
+    vertical-align: middle;
+    margin-top:1rem;
+}
+@media all and (orientation : landscape){
+    .item-content strong{
+        font-size: 2.8rem;
+    }
+    .item-content span{
+        font-size: 1.8rem;
+    }
+}
+@media screen and ( max-width: 479px ) {
+    html{font-size:5px;}
+    .item-name{
+        height:5rem;
+    }
+}
