@@ -16,6 +16,30 @@
         a{text-decoration: none;}
         :link, :visited , ins{ text-decoration:none ;}
         img {width: 100%; border: none;vertical-align: middle;}
+        @-webkit-keyframes navAnchor{
+            0% {
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
+            100% {
+                background-color:#db291e;}
+        }
+        @-ms-keyframes navAnchor{
+            0% {
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
+            100% {
+                background-color:#db291e;}
+        }
+        @keyframes navAnchor{
+            0% {
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
+            100% {
+                background-color:#db291e;}
+        }
         .clearfix:after {content:"\0020";display:block;height:0;visibility:hidden;clear:both;}
         .clearfix {zoom:1;}
         .wrap{margin:0 2%;padding-bottom:5rem;}
@@ -60,16 +84,16 @@
         .fixnav li{width:16.6%;float:left;padding:1rem 0;}
         .fixnav a{color:#993333;font-size:1.2rem;line-height:1.2rem;border-right:solid 0.1rem #993333;display:block;text-align:center;font-weight:bold;}
         .fixnav li:last-child a{border:0;}
-        .fixnav .selected a{color:#fff;}
-        .fixnav .selected{background-color:#db291e;}
+        .fixnav .selected a{color:#fff;border:0;}
+        .fixnav .selected{background-color:#db291e;margin-left:-0.1rem;-webkit-animation:navAnchor 2s linear infinite;animation:navAnchor 2s linear infinite;}
         .totop a{height:2.4rem;background:url(images/sprite.png) 2rem -12.2rem no-repeat;background-size:13rem;text-indent:-9999rem;}
         .popup-bg{background:#000;filter: Alpha(opacity=50);opacity:0.5;position:fixed;z-index:10;width:100%;height:100%;top:0;left:0;}
-        .popup-main{width:28rem;height:31rem;position:fixed;left:50%;margin-left:-14rem;top:50%;margin-top:-15rem;background-color:#fff;z-index:11;border-radius:2rem;}
+        .popup-main{width:28rem;min-height:30rem;position:absolute;left:50%;margin-left:-14rem;top:10%;background-color:#fff;z-index:11;border-radius:2rem;}
         .popup-title{width:13rem;height:5rem;background:url(images/sprite.png) 0 0 no-repeat;background-size:13rem;text-indent:-9999rem;overflow:hidden;margin:-2.5rem auto 0 auto;}
         .popup-close{width:3rem;height:3rem;background:url(images/sprite.png) 0 -7.5rem no-repeat;background-size:13rem;text-indent:-9999rem;overflow:hidden;float:right;margin:-3.3rem -0.7rem 0 0;position:relative;}
         .popup-content{padding:1rem 0.6rem 1rem 1rem;font-size:1.2rem;color:#595857;}
-        .popup-content dl{padding-top:1.5rem;}
-        .popup-content p{padding:0.3rem 0;}
+        .popup-content dl{padding-top:1.2rem;}
+        .popup-content p{padding:0.2rem 0;}
         @media screen and (min-width:321px) and (max-width:479px ) {
             html{font-size:12px;}
         }
@@ -120,8 +144,7 @@
                         二天15点前在活动页面公布），获得免单伙伴
                         记得收到产品与我们客服美女联系哦！
                     </p>
-                    <p>（6）社区晒单有礼（晒单分享前十名将获得99元大礼包哦)！
-                    </p>
+                    <p>（6）社区晒单有礼（晒单分享前十名将获得99元大礼包哦)！</p>
                 </dd>
             </dl>
         </div>
@@ -524,7 +547,7 @@
     </div>
 </div>
 <ul id="fixnav" class="fixnav clearfix">
-    <li onclick="HBScroll.VerticalToId('A1',0);"><a href="javascript:void(0);">限量<br/>秒杀</a></li>
+    <li class="selected" onclick="HBScroll.VerticalToId('A1',0);"><a href="javascript:void(0);">限量<br/>秒杀</a></li>
     <li onclick="HBScroll.VerticalToId('A2',0);"><a href="javascript:void(0);">爆款<br/>热卖</a></li>
     <li onclick="HBScroll.VerticalToId('A3',0);"><a href="javascript:void(0);">性致<br/>勃勃</a></li>
     <li onclick="HBScroll.VerticalToId('A4',0);"><a href="javascript:void(0);">无爱<br/>不欢</a></li>
@@ -543,12 +566,28 @@
             $("#popup").show();
         });
         $(".scrollLoading").scrollLoading();
-        $("#fixnav").find("li").on("click",function(){
-            $(this).addClass("selected").siblings().removeClass("selected");
-        });
-        $("#fixnav").find("li").eq(-1).on("click",function(){
-            $("#fixnav").find("li").removeClass("selected");
-        });
+        var OffsetYA1 = document.getElementById("A1").getBoundingClientRect().top+document.body.scrollTop-60,
+            OffsetYA2 = document.getElementById("A2").getBoundingClientRect().top+document.body.scrollTop-60,
+            OffsetYA3 = document.getElementById("A3").getBoundingClientRect().top+document.body.scrollTop-60,
+            OffsetYA4 = document.getElementById("A4").getBoundingClientRect().top+document.body.scrollTop-60,
+            OffsetYA5 = document.getElementById("A5").getBoundingClientRect().top+document.body.scrollTop-60;
+        window.onscroll = function() {
+            if(document.body.scrollTop>=OffsetYA1){
+                $("#fixnav").find("li").eq(0).addClass("selected").siblings().removeClass("selected");
+            }
+            if(document.body.scrollTop>=OffsetYA2){
+                $("#fixnav").find("li").eq(1).addClass("selected").siblings().removeClass("selected");
+            }
+            if(document.body.scrollTop>=OffsetYA3){
+                $("#fixnav").find("li").eq(2).addClass("selected").siblings().removeClass("selected");
+            }
+            if(document.body.scrollTop>=OffsetYA4){
+                $("#fixnav").find("li").eq(3).addClass("selected").siblings().removeClass("selected");
+            }
+            if(document.body.scrollTop>=OffsetYA5){
+                $("#fixnav").find("li").eq(4).addClass("selected").siblings().removeClass("selected");
+            }
+        }
     });
 </script>
 </body>

@@ -16,25 +16,30 @@
         a{text-decoration: none;}
         :link, :visited , ins{ text-decoration:none ;}
         img {width: 100%; border: none;vertical-align: middle;}
-        @-webkit-keyframes Transform{
+        @-webkit-keyframes navAnchor{
             0% {
-                color:#db291e;}
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
             100% {
-                color:#993333;}
+                background-color:#db291e;}
         }
-        @-ms-keyframes down{
+        @-ms-keyframes navAnchor{
             0% {
-                color:#db291e;}
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
             100% {
-                color:#993333;}
+                background-color:#db291e;}
         }
-        @keyframes down{
+        @keyframes navAnchor{
             0% {
-                color:#db291e;}
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
             100% {
-                color:#993333;}
+                background-color:#db291e;}
         }
-
         .clearfix:after {content:"\0020";display:block;height:0;visibility:hidden;clear:both;}
         .clearfix {zoom:1;}
         .wrap{margin:0 2%;padding-bottom:5rem;}
@@ -80,15 +85,15 @@
         .fixnav a{color:#993333;font-size:1.2rem;line-height:1.2rem;border-right:solid 0.1rem #993333;display:block;text-align:center;font-weight:bold;}
         .fixnav li:last-child a{border:0;}
         .fixnav .selected a{color:#fff;border:0;}
-        .fixnav .selected{background-color:#db291e;margin-left:-0.1rem;}
+        .fixnav .selected{background-color:#db291e;margin-left:-0.1rem;-webkit-animation:navAnchor 2s linear infinite;animation:navAnchor 2s linear infinite;}
         .totop a{height:2.4rem;background:url(images/sprite.png) 2rem -12.2rem no-repeat;background-size:13rem;text-indent:-9999rem;}
         .popup-bg{background:#000;filter: Alpha(opacity=50);opacity:0.5;position:fixed;z-index:10;width:100%;height:100%;top:0;left:0;}
-        .popup-main{width:28rem;height:31rem;position:fixed;left:50%;margin-left:-14rem;top:50%;margin-top:-15rem;background-color:#fff;z-index:11;border-radius:2rem;}
+        .popup-main{width:28rem;min-height:30rem;position:absolute;left:50%;margin-left:-14rem;top:10%;background-color:#fff;z-index:11;border-radius:2rem;}
         .popup-title{width:13rem;height:5rem;background:url(images/sprite.png) 0 0 no-repeat;background-size:13rem;text-indent:-9999rem;overflow:hidden;margin:-2.5rem auto 0 auto;}
         .popup-close{width:3rem;height:3rem;background:url(images/sprite.png) 0 -7.5rem no-repeat;background-size:13rem;text-indent:-9999rem;overflow:hidden;float:right;margin:-3.3rem -0.7rem 0 0;position:relative;}
         .popup-content{padding:1rem 0.6rem 1rem 1rem;font-size:1.2rem;color:#595857;}
-        .popup-content dl{padding-top:1.5rem;}
-        .popup-content p{padding:0.3rem 0;}
+        .popup-content dl{padding-top:1.2rem;}
+        .popup-content p{padding:0.2rem 0;}
         @media screen and (min-width:321px) and (max-width:479px ) {
             html{font-size:12px;}
         }
@@ -139,8 +144,7 @@
                         二天15点前在活动页面公布），获得免单伙伴
                         记得收到产品与我们客服美女联系哦！
                     </p>
-                    <p>（6）社区晒单有礼（晒单分享前十名将获得99元大礼包哦)！
-                    </p>
+                    <p>（6）社区晒单有礼（晒单分享前十名将获得99元大礼包哦)！</p>
                 </dd>
             </dl>
         </div>
