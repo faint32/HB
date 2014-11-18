@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>双11-棒棒节-合欢双修</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <style type="text/css">
+        html {font-size:10px;-webkit-text-size-adjust:100%;}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;}
+        body{width:100%;height:100%;background-color:#e37227;}
+        body{font:1.2rem/1.4 Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+        ul{list-style: none;}
+        a{text-decoration: none;-webkit-tap-highlight-color:transparent;}
+        :link, :visited , ins{ text-decoration:none ;}
+        img {width: 100%; border: none;vertical-align: middle;}
+        .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+        .clearfix {display:block;zoom: 1;}
+        .original-price{color:#a3a3a2;font-size:1.2rem;text-decoration:line-through;padding-top:0.5rem;text-align:right;}
+        .banner{position:relative;min-height:20rem;}
+        .title{background:url(images/hh-title-bg.png) no-repeat;height:7.6rem;display:block;overflow:hidden;text-indent:-9999rem;background-size:32rem;margin:0 auto;position:relative;}
+        .title-2{background-position:0 -9.8rem;}
+        .title-3{background-position:0 -20rem;}
+        .title-4{background-position:0 -30rem;}
+        .p-list{width:94%;margin-left:3%;margin-right:3%;}
+        .p-box-1{padding-top:1rem;}
+        .product-item{width:48.5%;overflow: hidden;background-color: #fff;margin-top:1rem;float:left;}
+        .product-item:nth-child(even){margin-left:3%;}
+        .product-item a {color: #383c3c; text-decoration: none;display:block;}
+        .product-item-img{background:url(images/loading.gif) 50% 50% no-repeat;height:13.2rem;}
+        .product-item-img img{display: block;}
+        .item-name{font-size:1.2rem;height:3.3rem;overflow:hidden;text-overflow: ellipsis;}
+        .item-content{padding:0.5rem;}
+        .item-price{padding-bottom:0.2rem;}
+        .item-price span,
+        .item-price strong{
+            -webkit-flex:auto;
+            flex:auto;
+            -moz-box-flex:1;
+            -webkit-box-flex:1;
+            box-flex:1;
+            display:block;
+        }
+        .item-price strong{font-weight: normal;color: #ff3933;font-size:1.7rem;}
+        .add-cart-box{background-color:#ff3933;height:2.75rem;line-height:2.8rem;text-align:center;color:#fff;font-size:1.5rem;border-radius:0.4rem;}
+        .more-box{padding-bottom:2rem;text-align: center;}
+        .more-btn{display: inline-block;text-align: center;margin-top:2.2rem;width:18rem;height:4rem;line-height:3.8rem;background-color: #fec594;border-bottom:solid 0.3rem #fa8e46;color: #333;font-size:1.8rem;border-radius:0.8rem;overflow: hidden;}
+        .flex{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -o-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+        }
+        .fixnav{position:fixed;bottom:0;left:0;width:100%;z-index:9;background:#fff;filter: Alpha(opacity=95);opacity:0.95;}
+        .fixnav li{
+            padding:0.6rem 0;
+            -webkit-flex:auto;
+            flex:auto;
+            -moz-box-flex:1;
+            -webkit-box-flex:1;
+            box-flex:1;
+        }
+        .fixnav a{color:#ff4e08;font-size:1.2rem;line-height:3rem;border-right:solid 0.1rem #ad9483;display:block;text-align:center;font-weight:bold;}
+        .fixnav li:last-child a{border:0;height:3rem;overflow:hidden;line-height:4.6rem;position:relative;padding:0 0.1rem;}
+        .fixnav .selected a{color:#fff;border:0;}
+        .fixnav .selected{background-color:#ff4e08;margin-left:-0.1rem;}
+        .footer{margin:0 2%;padding-bottom:6rem;}
+        .footer a{margin-top:1rem;display:block;}
+        .icon-double11{
+            display: inline-block;
+            color: #ff4e08;
+            fill: currentColor;
+            position:absolute;
+            top:-1.3rem;
+            left:50%;
+            width:4rem;
+            height:4rem;
+            margin-left:-1.9rem;
+        }
+        @media screen and (min-width:321px) and (max-width:479px ) {
+            html{font-size:12px;}
+        }
+        @media screen and (min-width:480px) and (max-width:639px ) {
+            html{font-size:15px;}
+        }
+        @media screen and (min-width:640px) and (max-width:719px ) {
+            html{font-size:20px;}
+        }
+        @media screen and (min-width:720px) and (max-width:749px ) {
+            html{font-size:22.5px;}
+        }
+        @media screen and (min-width:750px) and (max-width:799px ) {
+            html{font-size:23.5px;}
+        }
+        @media screen and (min-width:800px) and (max-width:959px ) {
+            html{font-size:25px;}
+        }
+        @media screen and (min-width:960px) and (max-width:1079px ) {
+            html{font-size:30px;}
+        }
+        @media screen and (min-width:1080px) {
+            html{font-size:32px;}
+        }
+    </style>
+</head>
+<body>
+<div class="banner" id="top">
+    <img src="images/hh-banner.jpg" alt="11.10-11.11 棒棒节 合欢双修 狂欢钜惠之双宿双飞">
+</div>
+<div class="wrap" id="wrap">
+    <div class="p-box-1">
+        <p id="A1" class="title title-1">激情夜晚--干柴烈火，鱼水之欢，要不要我添油加醋？</p>
+        <ul class="p-list list-1 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1143">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PA1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">黑豹 延时喷剂液外用持久防早泄 不麻木
+                        </p>
+                        <p class="item-price flex"><strong>¥78.00</strong><span class="original-price">¥108.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="128">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PAA2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">玩爆潮品 星座系列延时锁精水晶套</p>
+                        <p class="item-price flex"><strong>¥9.90</strong><span class="original-price">¥18.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1228">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PA3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">雷霆leten维纳斯AV脉冲式变频震动多速阴蒂刺激震动棒按摩棒
+                        </p>
+                        <p class="item-price flex"><strong>¥99.00</strong><span class="original-price">¥109.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1042">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PA4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">蒂贝 遥色心跳2代 粉色
+
+                        </p>
+                        <p class="item-price flex"><strong>¥158.00</strong><span class="original-price">¥168.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="43">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PA5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">818男/女士调情香水 佛罗蒙性息素吸引异性 留香更持久
+
+                        </p>
+                        <p class="item-price flex"><strong>¥18.00</strong><span class="original-price">¥18.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="180">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PA6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">百乐火辣劲情十频双震动按摩棒
+
+                        </p>
+                        <p class="item-price flex"><strong>¥299.00</strong><span class="original-price">¥328.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn has-cid" href="javascript:void(0);" categoryId="激情夜晚&id=5">MORE></a>
+        </div>
+    </div>
+    <div class="p-box-2">
+        <p id="A2" class="title title-2">偷欢之乐 停车坐爱枫林晚，玉人何处教吹箫</p>
+        <ul class="p-list list-2 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="6">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PB1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">瑞典LELO润滑液 高端情趣性爱用品 私密保湿润滑剂助情
+
+                        </p>
+                        <p class="item-price flex"><strong>¥66.00</strong><span class="original-price">¥188.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1393">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PB2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">诺兰 芯美 小蝌蚪 男女体内共振玩具 粉色
+
+                        </p>
+                        <p class="item-price flex"><strong>¥88.00</strong><span class="original-price">¥96.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="289">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PB3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">杜蕾斯V焕觉 多速震动棒
+
+                        </p>
+                        <p class="item-price flex"><strong>¥128.00</strong><span class="original-price">¥138.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1231">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PB4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">原装进口 德国Lylou-激情酷爱费络蒙香水 助情香水 50ML
+
+                        </p>
+                        <p class="item-price flex"><strong>¥258.00</strong><span class="original-price">¥298.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1233">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PB5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name"> 激发女性情欲 天然有机催欲凝胶 Sliqui美国原装进口 33ML
+                        </p>
+                        <p class="item-price flex"><strong>¥138.00</strong><span class="original-price">¥168.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1176">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PB6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">正品 浓情蜜液二代女外用喷剂 调情高潮液激发欲望高潮喷水 15ml
+                        </p>
+                        <p class="item-price flex"><strong>¥24.00</strong><span class="original-price">¥48.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn has-cid" href="javascript:void(0);" categoryId="偷欢之乐&id=26">MORE></a>
+        </div>
+    </div>
+    <div class="p-box-3">
+        <p id="A3" class="title title-3">女王调教 女王大人，挥舞的小皮鞭，不要停！</p>
+        <ul class="p-list list-3 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1423">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PC1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">阿芙拉 钻石纹-脖套 女用野性宠物  SM情趣玩具</p>
+                        <p class="item-price flex"><strong>¥29.00</strong><span class="original-price">¥68.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1383">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PC2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">SM另类玩具 情趣“警务”专用手铐 男女束缚捆绑
+
+                        </p>
+                        <p class="item-price flex"><strong>¥65.00</strong><span class="original-price">¥138.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1382">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PC3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">SM加长皮鞭打屁股 另类玩具 鞭子女王调情调教用品
+                        </p>
+                        <p class="item-price flex"><strong>¥15.00</strong><span class="original-price">¥30.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1374">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PC4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">阿芙拉 钻石纹-口衔 口塞另类玩具 SM情趣玩具
+
+                        </p>
+                        <p class="item-price flex"><strong>¥15.00</strong><span class="original-price">¥30.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box"></div>
+    </div>
+    <div class="p-box-4">
+        <p id="A4" class="title title-4">同志你好 采菊东篱下，莫道不消魂。</p>
+        <ul class="p-list list-4 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="396">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PD1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">百乐女同穿戴双响炮</p>
+                        <p class="item-price flex"><strong>¥49.00</strong><span class="original-price">¥58.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="740">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PD2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">双头龙拉拉两人相互自慰可折弯潮吹棒
+
+                        </p>
+                        <p class="item-price flex"><strong>¥39.00</strong><span class="original-price">¥46.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="237">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PD3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">百乐女同大小双头龙
+                        </p>
+                        <p class="item-price flex"><strong>¥35.00</strong><span class="original-price">¥39.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="508">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/hhsx/PD4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">瑞典皮克朋男女享用 彩色低音防水肛门自慰器 后庭震动棒 樱桃红
+
+                        </p>
+                        <p class="item-price flex"><strong>¥259.00</strong><span class="original-price">¥280.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box"></div>
+   </div>
+</div>
+<div class="footer">
+    <a href="index.html">
+        <img src="images/footer-1.jpg" alt="主会场"/>
+    </a>
+    <a href="ssnn.html">
+        <img src="images/footer-2.jpg" alt="食色男女"/>
+    </a>
+    <a href="qqfc.html">
+        <img src="images/footer-3.jpg" alt="情趣纷呈"/>
+    </a>
+    <a href="tttt.html">
+        <img src="images/footer-5.jpg" alt="套套天堂"/>
+    </a>
+</div>
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-double11" viewBox="0 0 1024 1024">
+            <title>double11</title>
+            <path class="path1" d="M9.92 435.632h72.368c5.408 0 9.792-4.4 9.792-9.824v-72.864c0-5.424-4.384-9.824-9.792-9.824h-72.368c-5.424 0-9.792 4.4-9.792 9.824v72.864c0 5.408 4.368 9.824 9.792 9.824zM82.496 465.936h-72.72c-5.392 0-9.776 4.4-9.776 9.84v72.848c0 5.44 4.384 9.84 9.776 9.84h72.72c5.408 0 9.776-4.4 9.776-9.84v-72.848c0.016-5.44-4.368-9.84-9.776-9.84zM82.496 588.368h-72.72c-5.392 0-9.776 4.416-9.776 9.84v72.848c0 5.44 4.384 9.84 9.776 9.84h72.72c5.408 0 9.776-4.4 9.776-9.84v-72.848c0.016-5.424-4.368-9.84-9.776-9.84zM194.208 435.632h72.384c5.408 0 9.792-4.4 9.792-9.824v-72.864c0-5.424-4.384-9.824-9.792-9.824h-72.384c-5.408 0-9.776 4.4-9.776 9.824v72.864c-0.016 5.408 4.368 9.824 9.776 9.824zM266.784 465.936h-72.704c-5.392 0-9.76 4.4-9.76 9.84v72.848c0 5.44 4.368 9.84 9.76 9.84h72.704c5.408 0 9.776-4.4 9.776-9.84v-72.848c0-5.44-4.368-9.84-9.776-9.84zM266.784 588.368h-72.704c-5.392 0-9.76 4.4-9.76 9.824v72.848c0 5.44 4.368 9.84 9.76 9.84h72.704c5.408 0 9.776-4.4 9.776-9.84v-72.848c0-5.408-4.368-9.824-9.776-9.824zM757.344 435.632h72.368c5.408 0 9.76-4.4 9.76-9.824v-72.864c0-5.424-4.352-9.824-9.76-9.824h-72.368c-5.408 0-9.776 4.4-9.776 9.824v72.864c0 5.408 4.368 9.824 9.776 9.824zM829.904 465.936h-72.704c-5.392 0-9.776 4.4-9.776 9.84v72.848c0 5.44 4.384 9.84 9.776 9.84h72.704c5.424 0 9.76-4.4 9.76-9.84v-72.848c0-5.44-4.336-9.84-9.76-9.84zM829.904 588.368h-72.704c-5.392 0-9.776 4.4-9.776 9.824v72.848c0 5.44 4.384 9.84 9.776 9.84h72.704c5.424 0 9.76-4.4 9.76-9.84v-72.848c0-5.408-4.336-9.824-9.76-9.824zM941.648 435.632h72.384c5.392 0 9.76-4.4 9.76-9.824v-72.864c0-5.424-4.368-9.824-9.76-9.824h-72.384c-5.424 0-9.792 4.4-9.792 9.824v72.864c-0.016 5.408 4.368 9.824 9.792 9.824zM1014.224 465.936h-72.736c-5.376 0-9.76 4.4-9.76 9.84v72.848c0 5.44 4.384 9.84 9.76 9.84h72.736c5.376 0 9.776-4.4 9.776-9.84v-72.848c0-5.44-4.4-9.84-9.776-9.84zM1014.224 588.368h-72.736c-5.376 0-9.76 4.4-9.76 9.824v72.848c0 5.44 4.384 9.84 9.76 9.84h72.736c5.376 0 9.776-4.4 9.776-9.84v-72.848c0-5.408-4.4-9.824-9.776-9.824zM533.008 588.368h-103.44c-5.408 0-9.776 4.4-9.776 9.824v72.848c0 5.44 4.368 9.84 9.776 9.84h103.44c5.408 0 9.776-4.4 9.776-9.84v-72.848c0-5.408-4.384-9.824-9.776-9.824z" />
+        </symbol>
+    </defs>
+</svg>
+<ul id="fixnav" class="flex fixnav">
+    <li class="selected" onClick="HBScroll.VerticalToId('A1',20);"><a href="javascript:void(0);">激情夜晚</a></li>
+    <li onClick="HBScroll.VerticalToId('A2',20);"><a href="javascript:void(0);">偷欢之乐</a></li>
+    <li onClick="HBScroll.VerticalToId('A3',20);"><a href="javascript:void(0);">女王调教</a></li>
+    <li onClick="HBScroll.VerticalToId('A4',20);"><a href="javascript:void(0);">同志你好</a></li>
+    <li><a href="index.html"><svg class="icon-double11"><use xlink:href="#icon-double11"></use></svg>主会场</a></li>
+</ul>
+<script type="text/javascript" src="js/zepto-1.1.4.min.js"></script>
+<script type="text/javascript">
+    (function browserRedirect() {
+        var iosSrc = "ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=";
+        var androidSrc = "ushengsheng.xjb://splash/m=shop&a=detail&id=";
+        var iosCategory = "ushengsheng.xjb://xingjiabi?m=topic&a=shop&tl=";
+        var andCategory = "ushengsheng.xjb://splash/m=topic&a=shop&tl=";
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var alla = $("#wrap").find("a");
+        var aLength = alla.length;
+        for(var i=0;i<aLength;i++){
+            var thisPId = alla.eq(i).attr("productId");
+            var thisCId = alla.eq(i).attr("categoryId");
+            if(bIsAndroid){
+                alla.eq(i).attr("href",androidSrc+thisPId);
+                if(alla.eq(i).hasClass("has-cid")){
+                    alla.eq(i).attr("href",andCategory+thisCId);
+                }
+            }else{
+                alla.eq(i).attr("href",iosSrc+thisPId);
+                if(alla.eq(i).hasClass("has-cid")){
+                    alla.eq(i).attr("href",iosCategory+thisCId);
+                }
+            }
+        }
+    })();
+</script>
+<script type="text/javascript" src="js/HBScrollTo.min.js"></script>
+<script type="text/javascript" src="js/zepto.scrollLoading.min.js"></script>
+<script type="text/javascript">
+    function addSelected(i){
+        $("#fixnav").find("li").eq(i).addClass("selected").siblings().removeClass("selected");
+    }
+    $(function(){
+        $(".scrollLoading").scrollLoading();
+        var OffsetYA1 = document.getElementById("A1").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA2 = document.getElementById("A2").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA3 = document.getElementById("A3").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA4 = document.getElementById("A4").getBoundingClientRect().top+document.body.scrollTop;
+        window.onscroll = function() {
+            if(document.body.scrollTop>=OffsetYA1-30&&window.scrollY<OffsetYA2){
+                addSelected(0);
+            }
+            if(document.body.scrollTop>=OffsetYA2-30&&window.scrollY<OffsetYA3){
+                addSelected(1);
+            }
+            if(document.body.scrollTop>=OffsetYA3-30&&window.scrollY<OffsetYA4){
+                addSelected(2);
+            }
+            if(document.body.scrollTop>=OffsetYA4-30&&window.scrollY){
+                addSelected(3);
+            }
+        }
+    });
+</script>
+</body>
+</html>

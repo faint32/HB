@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+<meta charset="UTF-8">
+<title>性价比情趣商城APP-官方下载页</title>
+<meta name="keywords" content="他趣,性价比,成人用品,情趣用品,情趣内衣,跳蛋,丝袜,飞机杯,他趣手机客户端下载" />
+<meta name="description" content="他趣是中国首家基于移动互联网客户端的“情趣社区商城”，推荐性价比最高的情趣产品，做中国最专业的情趣品牌。" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<link rel="shortcut icon" href="http://xingjiabi.b0.upaiyun.com/html/images/favicon.ico">
+<style type="text/css">
+html {-ms-touch-action: none;font-size:10px;-webkit-text-size-adjust:100%;}
+html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;-webkit-user-select:none;;}
+html,body{width:100%;height:100%;}
+body{font:1.2rem/1.4 Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+ul{list-style: none;}
+a{text-decoration: none;}
+.box{position: absolute;width: 100%;height: 100%;overflow: hidden;}
+.section{
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    -webkit-transform: translate3d(0px, 100%, 0px);
+    transform: translate3d(0px, 100%, 0px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;left:0;
+    overflow: hidden;
+    background: #fff;
+}
+/*向上滑动的标识*/
+@-webkit-keyframes up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0.5rem, 0);}
+    50% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);}
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -0.5rem, 0);}
+}
+@-ms-keyframes up{
+    0% {
+        opacity: 0;
+        -ms-transform: translate3d(0, 0.5rem, 0);}
+    50% {
+        opacity: 1;
+        -ms-transform: translate3d(0, 0, 0);}
+    100% {
+        opacity: 0;
+        -ms-transform: translate3d(0, -0.5rem, 0);}
+}
+@keyframes up{
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0.5rem, 0);}
+    50% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);}
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -0.5rem, 0);}
+}
+
+@-webkit-keyframes down{
+    0% {
+        -webkit-transform: translate3d(0, -0.1rem, 0);}
+    100% {
+        -webkit-transform: translate3d(0, 0.1rem, 0);}
+}
+@-ms-keyframes down{
+    0% {
+        -ms-transform: translate3d(0, -0.1rem, 0);}
+    100% {
+        -ms-transform: translate3d(0, 0.1rem, 0);}
+}
+@keyframes down{
+    0% {
+        transform: translate3d(0, -0.1rem, 0);}
+    100% {
+        transform: translate3d(0, 0.1rem, 0);}
+}
+/*animation*/
+.moving{
+    -webkit-transition: none 0 step-start;
+    -o-transition: none 0 step-start;
+    transition: none 0 step-start;
+}
+.section1{
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/section1.jpg) 50% 0 no-repeat;
+    background-size:32rem;
+}
+.section2{
+    background:#f5f5f5 url(http://xingjiabi.b0.upaiyun.com/html/images/section2.jpg) 50% 0 no-repeat;
+    background-size:32rem;
+
+}
+.section3{
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/section3.jpg) 50% 0 no-repeat;
+    background-size:32rem;
+}
+.section4{
+    background:#f5f5f5 url(http://xingjiabi.b0.upaiyun.com/html/images/section4.jpg) 50% 0 no-repeat;
+    background-size:32rem;
+}
+.download-top{
+    position:relative;
+    width:21.7rem;
+    height:4.4rem;
+    line-height:4.4rem;
+    margin:23.4rem auto 0 auto;
+    z-index:1;
+}
+.download-top a{
+    color:#fff;
+    font-family:"Heiti SC", serif;
+    font-size:3rem;
+    display:block;
+    position:relative;
+    z-index:1;
+    padding-left:6rem;
+    line-height:4rem;
+    border:solid 0.2rem #fff;
+}
+.download-top-bg{
+    background-color:#fff;
+    filter: Alpha(opacity=15);
+    opacity:0.15;
+    width:21.7rem;
+    height:4.4rem;
+    line-height:4.4rem;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.download-top span{
+    width:1.9rem;
+    height:2.4rem;
+    display:block;
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/icon.png) no-repeat;
+    background-size:2.5rem;
+    position:absolute;
+    top:0.8rem;
+    left:3rem;
+}
+.arrow-box{
+    background-color:#f5f5f5;
+    width:5rem;
+    height:5rem;
+    border-radius:2.5rem;
+    position:absolute;
+    bottom:-2.5rem;
+    left:50%;
+    margin-left:-2.5rem;
+}
+.arrow-icon{
+    width:2.4rem;
+    height:1.5rem;
+    display:block;
+    margin:0.7rem auto 0 auto;
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/icon.png) 0 -7.5rem no-repeat;
+    background-size:2.5rem;
+    -webkit-animation:'up' 1.6s ease 0s infinite normal;
+    animation:'up' 1.6s ease 0s infinite normal;
+}
+.section2 .arrow-icon{
+    background-position:0 -15rem;
+}
+.section2 .arrow-box,
+.section4 .arrow-box{
+    background-color:#fff;
+}
+.section3 .arrow-icon{
+    background-position:0 -22.5rem;
+}
+.section4 .arrow-icon{
+    background-position:0 -30rem;
+}
+.footer{
+    background-color:#f5f5f5;
+}
+.download-bottom{
+    width:100%;
+    height:80%;
+    position:relative;
+    background-color:#fff;
+}
+.download-btn-box{
+    width:22rem;
+    height:9rem;
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/bottom-tag.png) 0 bottom no-repeat;
+    padding-bottom:4.5rem;
+    background-size:23rem;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-11.5rem;
+    margin-top:-4.5rem;
+}
+.footer-info{
+    height:20%;
+    width:100%;
+    position:absolute;
+}
+.footer-logo{
+    height:5rem;
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/logo.png) center bottom no-repeat;
+    background-size:10rem;
+}
+.footer-copyright{
+    text-align:center;
+    font-size:1.2rem;
+    line-height:2rem;
+    color:#a3a3a2;
+    font-family:"Heiti SC", serif;
+}
+.download-btn{
+    position:relative;
+    height:4.4rem;
+}
+.download-btn a{
+    line-height:4.2rem;
+    border:solid 0.2rem #c864f0;
+    background-color:#f7e8fd;
+    color:#c864f0;
+    display:block;
+    font-size:3rem;
+    font-family:"Heiti SC","Helvetica Neue", serif;
+    padding-left:6.25rem;
+}
+.download-btn span{
+    width:1.9rem;
+    height:2.4rem;
+    display:block;
+    background:url(http://xingjiabi.b0.upaiyun.com/html/images/icon.png) 0 -37.5rem no-repeat;
+    background-size:2.5rem;
+    position:absolute;
+    top:0.9rem;
+    left:3rem;
+    -webkit-animation:'down' 0.5s ease 0s infinite normal;
+    animation:'down' 0.5s ease 0s infinite normal;
+}
+#popup{background:url(http://xingjiabi.b0.upaiyun.com/html/images/popup-android.png) 50% 45% no-repeat #f0f0f0;background-size:90%;position:fixed;top:0;left:0;width:100%;height:100%;display:none;}
+@media screen and (min-width:321px) and (max-width:479px ) {
+    html{font-size:12px;}
+}
+@media screen and (min-width:480px) and (max-width:639px ) {
+    html{font-size:15px;}
+}
+@media screen and (min-width:640px) and (max-width:719px ) {
+    html{font-size:20px;}
+}
+@media screen and (min-width:720px) and (max-width:749px ) {
+    html{font-size:22.5px;}
+}
+@media screen and (min-width:750px) and (max-width:799px ) {
+    html{font-size:23.5px;}
+}
+@media screen and (min-width:800px) and (max-width:959px ) {
+    html{font-size:25px;}
+}
+@media screen and (min-width:960px) and (max-width:1079px ) {
+    html{font-size:30px;}
+}
+@media screen and (min-width:1080px) {
+    html{font-size:32px;}
+}
+</style>
+<script type="text/javascript">
+    function is_weixn(){
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+            document.getElementById("popup").style.display="block";
+        } else {
+            return false;
+        }
+    }
+</script>
+</head>
+<body>
+<div class="box">
+    <section class="section section1">
+        <div class="download-top">
+            <a onclick="is_weixn();" href="http://xjbdocs.b0.upaiyun.com/apk/xingjiabi.apk"><span></span>立即下载</a>
+            <p class="download-top-bg"></p>
+        </div>
+        <div class="arrow-box">
+            <i class="arrow-icon"></i>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="arrow-box">
+            <i class="arrow-icon"></i>
+        </div>
+    </section>
+    <section class="section section3">
+        <div class="arrow-box">
+            <i class="arrow-icon"></i>
+        </div>
+    </section>
+    <section class="section section4">
+        <div class="arrow-box">
+            <i class="arrow-icon"></i>
+        </div>
+    </section>
+    <footer class="section footer">
+        <div class="download-bottom">
+            <div class="download-btn-box">
+                <div class="download-btn">
+                    <a onclick="is_weixn();" href="http://xjbdocs.b0.upaiyun.com/apk/xingjiabi.apk"><span></span>立即下载</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p class="footer-logo"></p>
+            <p class="footer-copyright">&nbsp;&nbsp;Copyright &copy; 2014</p>
+        </div>
+    </footer>
+</div>
+<div id="popup" onclick="javascript:document.getElementById('popup').style.display='none';"></div>
+<script type="text/javascript" src="http://xjbdocs.b0.upaiyun.com/statics/ddt.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+        pages = new PageSlide($('.box'), 'Y');
+        resize();
+    }
+</script>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?8613d2809e3df8ac14d1bf21bf3e8cf8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253547075'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1253547075' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+    <script language="javascript" type="text/javascript" src="http://js.users.51.la/17404883.js"></script>
+    <noscript><a href="http://www.51.la/?17404883" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17404883.asp" style="border:none" /></a></noscript>
+</div>
+</body>
+</html>

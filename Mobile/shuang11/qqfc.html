@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>双11-棒棒节-情趣纷呈</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <style type="text/css">
+        html {font-size:10px;-webkit-text-size-adjust:100%;}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;}
+        body{width:100%;height:100%;background-color:#b0168e;}
+        body{font:1.2rem/1.4 Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+        ul{list-style: none;}
+        a{text-decoration: none;-webkit-tap-highlight-color:transparent;}
+        :link, :visited , ins{ text-decoration:none ;}
+        img {width: 100%; border: none;vertical-align: middle;}
+        .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+        .clearfix {display:block;zoom: 1;}
+        .original-price{color:#a3a3a2;font-size:1.2rem;text-decoration:line-through;padding-top:0.5rem;text-align:right;}
+        .banner{position:relative;min-height:20rem;}
+        .title{background:url(images/qq-title-bg.png) no-repeat;height:7.6rem;display:block;overflow:hidden;text-indent:-9999rem;background-size:32rem;margin:0 auto;position:relative;}
+        .title-2{background-position:0 -9.8rem;}
+        .title-3{background-position:0 -20rem;}
+        .title-4{background-position:0 -30rem;}
+        .p-list{width:94%;margin-left:3%;margin-right:3%;}
+        .p-box-1{padding-top:1rem;}
+        .product-item{width:48.5%;overflow: hidden;background-color: #fff;margin-top:1rem;float:left;}
+        .product-item:nth-child(even){margin-left:3%;}
+        .product-item a {color: #383c3c; text-decoration: none;display:block;}
+        .product-item-img{background:url(images/loading.gif) 50% 50% no-repeat;height:13.2rem;}
+        .product-item-img img{display: block;}
+        .item-name{font-size:1.2rem;height:3.3rem;overflow:hidden;text-overflow: ellipsis;}
+        .item-content{padding:0.5rem;}
+        .item-price{padding-bottom:0.2rem;}
+        .item-price span,
+        .item-price strong{
+            -webkit-flex:auto;
+            flex:auto;
+            -moz-box-flex:1;
+            -webkit-box-flex:1;
+            box-flex:1;
+            display:block;
+        }
+        .item-price strong{font-weight: normal;color: #ff3933;font-size:1.7rem;}
+        .add-cart-box{background-color:#ff3933;height:2.75rem;line-height:2.8rem;text-align:center;color:#fff;font-size:1.5rem;border-radius:0.4rem;}
+        .more-box{padding-bottom:2rem;text-align: center;}
+        .more-btn{display: inline-block;text-align: center;margin-top:2.2rem;width:18rem;height:4rem;line-height:3.8rem;background-color: #fe9ce8;border-bottom:solid 0.3rem #e55ac6;color: #333;font-size:1.8rem;border-radius:0.8rem;overflow: hidden;}
+        .flex{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -o-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+        }
+        .fixnav{position:fixed;bottom:0;left:0;width:100%;z-index:9;background:#fff;filter: Alpha(opacity=95);opacity:0.95;}
+        .fixnav li{
+            padding:0.6rem 0;
+            -webkit-flex:auto;
+            flex:auto;
+            -moz-box-flex:1;
+            -webkit-box-flex:1;
+            box-flex:1;
+        }
+        .fixnav a{color:#d234b4;font-size:1.2rem;line-height:3rem;border-right:solid 0.1rem #8a9782;display:block;text-align:center;font-weight:bold;}
+        .fixnav li:last-child a{border:0;height:3rem;overflow:hidden;line-height:4.6rem;position:relative;padding:0 0.1rem;}
+        .fixnav .selected a{color:#fff;border:0;}
+        .fixnav .selected{background-color:#d234b4;margin-left:-0.1rem;}
+        .footer{margin:0 2%;padding-bottom:6rem;}
+        .footer a{margin-top:1rem;display:block;}
+        .icon-double11{
+            display: inline-block;
+            color: #d234b4;
+            fill: currentColor;
+            position:absolute;
+            top:-1.3rem;
+            left:50%;
+            width:4rem;
+            height:4rem;
+            margin-left:-1.9rem;
+        }
+        @media screen and (min-width:321px) and (max-width:479px ) {
+            html{font-size:12px;}
+        }
+        @media screen and (min-width:480px) and (max-width:639px ) {
+            html{font-size:15px;}
+        }
+        @media screen and (min-width:640px) and (max-width:719px ) {
+            html{font-size:20px;}
+        }
+        @media screen and (min-width:720px) and (max-width:749px ) {
+            html{font-size:22.5px;}
+        }
+        @media screen and (min-width:750px) and (max-width:799px ) {
+            html{font-size:23.5px;}
+        }
+        @media screen and (min-width:800px) and (max-width:959px ) {
+            html{font-size:25px;}
+        }
+        @media screen and (min-width:960px) and (max-width:1079px ) {
+            html{font-size:30px;}
+        }
+        @media screen and (min-width:1080px) {
+            html{font-size:32px;}
+        }
+    </style>
+</head>
+<body>
+<div class="banner" id="top">
+    <img src="images/qq-banner.jpg" alt="11.10-11.11 棒棒节 情趣纷呈 狂欢钜惠之风情万种">
+</div>
+<div class="wrap" id="wrap">
+    <div class="p-box-1">
+        <p id="A1" class="title title-1">萌动萝莉--哥哥，陪我去抓泥鳅呀，抓泥鳅</p>
+        <ul class="p-list list-1 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1020">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PAA1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">霏慕性感薄纱露乳睡裙</p>
+                        <p class="item-price flex"><strong>¥25.00</strong><span class="original-price">¥39.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="226">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PAA2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">透视三点/不露乳开裆公主短裙</p>
+                        <p class="item-price flex"><strong>¥24.00</strong><span class="original-price">¥48.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="306">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PA3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">绿光仙子性感透纱诱惑短裙精美刺绣钢托三点透视睡衣  
+                        </p>
+                        <p class="item-price flex"><strong>¥55.00</strong><span class="original-price">¥98.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="315">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PA4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">久慕雅黛 性感透视蕾丝绣花短裙
+                        </p>
+                        <p class="item-price flex"><strong>¥45.00</strong><span class="original-price">¥98.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="276">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PA5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">露乳可爱性感吊带透纱短裙
+                        </p>
+                        <p class="item-price flex"><strong>¥26.00</strong><span class="original-price">¥48.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="309">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PAA6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">久慕雅黛 激情三点式 后开档紧身蕾丝花边</p>
+                        <p class="item-price flex"><strong>¥25.00</strong><span class="original-price">¥40.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn has-cid" href="javascript:void(0);" categoryId="11萌动萝莉&id=27">MORE></a>
+        </div>
+    </div>
+    <div class="p-box-2">
+        <p id="A2" class="title title-2">魅惑制服--官人，今夜我是女警，我会对你欲擒故纵</p>
+        <ul class="p-list list-2 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1120">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PB1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">久慕雅黛深V花边网纱遮脐性感内衣
+                        </p>
+                        <p class="item-price flex"><strong>¥48.00</strong><span class="original-price">¥73.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1007">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PB2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">selebritee 立体蕾丝边柔软网纱女仆装
+                        </p>
+                        <p class="item-price flex"><strong>¥38.00</strong><span class="original-price">¥58.00.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="318">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PB3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">极度诱惑露胸女佣装情趣内衣
+                        </p>
+                        <p class="item-price flex"><strong>¥32.00</strong><span class="original-price">¥59.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="65">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PB4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">日式印花和服性感套装女式内衣
+                        </p>
+                        <p class="item-price flex"><strong>¥28.00</strong><span class="original-price">¥58.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="433">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PB5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">粉嫩柔弱女佣制服 透视露乳 蕾丝花边吊带围裙
+                        </p>
+                        <p class="item-price flex"><strong>¥38.00</strong><span class="original-price">¥68.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="250">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PB6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">性感女警察服前开制服诱惑套装
+                        </p>
+                        <p class="item-price flex"><strong>¥42.00</strong><span class="original-price">¥55.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn has-cid" href="javascript:void(0);" categoryId="11制服诱惑&id=46">MORE></a>
+        </div>
+    </div>
+    <div class="p-box-3">
+        <p id="A3" class="title title-3">玉女心经--亭亭玉立，惹无数痴汉竞折腰</p>
+        <ul class="p-list list-3 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="313">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PC1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">久慕雅黛 透明蕾丝碎花 性感钢托聚胸诱惑短裙</p>
+                        <p class="item-price flex"><strong>¥58.00</strong><span class="original-price">¥125.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="125">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PCC2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">朦胧透明露乳开档蕾丝短裙睡衣</p>
+                        <p class="item-price flex"><strong>¥26.00</strong><span class="original-price">¥58.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="302">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PC3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">久慕雅黛~高贵诱惑透视吊带睡裙
+                        </p>
+                        <p class="item-price flex"><strong>¥22.00</strong><span class="original-price">¥46.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="305">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PC4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">性感可爱蕾丝紧身短裙
+                        </p>
+                        <p class="item-price flex"><strong>¥32.00</strong><span class="original-price">¥68.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="71">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PC5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">可爱透明公主服黑色蕾丝白色短裙
+                        </p>
+                        <p class="item-price flex"><strong>¥28.00</strong><span class="original-price">¥50.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="652">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PC6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">可爱蕾丝吊带 高贵性女士薄纱透明长裙
+                        </p>
+                        <p class="item-price flex"><strong>¥28.00</strong><span class="original-price">¥59.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn has-cid" href="javascript:void(0);" categoryId="11玉女专区&id=45">MORE></a>
+        </div>
+    </div>
+    <div class="p-box-4">
+        <p id="A4" class="title title-4">傲娇御姐--过来，让姐姐好好疼爱你</p>
+        <ul class="p-list list-4 clearfix">
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1015">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PD1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">霏慕性感甜美宫廷马甲</p>
+                        <p class="item-price flex"><strong>¥38.00</strong><span class="original-price">¥68.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="381">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PDD2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">百花天使 美胸透视夜店紧身包臀裙OL秘书职业套装</p>
+                        <p class="item-price flex"><strong>¥39.00</strong><span class="original-price">¥78.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="923">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PD3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">绑带式褶皱修身包臀夜店制服性感短裙装
+                        </p>
+                        <p class="item-price flex"><strong>¥48.00</strong><span class="original-price">¥68.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="1256">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PD4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">selebratee性感T字设计连身开档连身袜
+                        </p>
+                        <p class="item-price flex"><strong>¥49.9</strong><span class="original-price">¥99.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="845">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PD5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">久慕雅黛！气质蕾丝边深V透视吊带开衫两件套
+                        </p>
+                        <p class="item-price flex"><strong>¥48.00</strong><span class="original-price">¥78.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="javascript:void(0);" productId="481">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/qqfc/PDD6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">曼妙诱惑 夜店女王低胸露乳 紧身超短裙</p>
+                        <p class="item-price flex"><strong>¥36.00</strong><span class="original-price">¥86.00</span></p>
+                        <p class="add-cart-box">立即抢购</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn has-cid" href="javascript:void(0);" categoryId="11御姐驾到&id=9">MORE></a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <a href="index.html">
+        <img src="images/footer-1.jpg" alt="主会场"/>
+    </a>
+    <a href="ssnn.html">
+        <img src="images/footer-2.jpg" alt="食色男女"/>
+    </a>
+    <a href="tttt.html">
+        <img src="images/footer-5.jpg" alt="套套天堂"/>
+    </a>
+    <a href="hhsx.html">
+        <img src="images/footer-4.jpg" alt="合欢双修"/>
+    </a>
+</div>
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-double11" viewBox="0 0 1024 1024">
+            <title>double11</title>
+            <path class="path1" d="M9.92 435.632h72.368c5.408 0 9.792-4.4 9.792-9.824v-72.864c0-5.424-4.384-9.824-9.792-9.824h-72.368c-5.424 0-9.792 4.4-9.792 9.824v72.864c0 5.408 4.368 9.824 9.792 9.824zM82.496 465.936h-72.72c-5.392 0-9.776 4.4-9.776 9.84v72.848c0 5.44 4.384 9.84 9.776 9.84h72.72c5.408 0 9.776-4.4 9.776-9.84v-72.848c0.016-5.44-4.368-9.84-9.776-9.84zM82.496 588.368h-72.72c-5.392 0-9.776 4.416-9.776 9.84v72.848c0 5.44 4.384 9.84 9.776 9.84h72.72c5.408 0 9.776-4.4 9.776-9.84v-72.848c0.016-5.424-4.368-9.84-9.776-9.84zM194.208 435.632h72.384c5.408 0 9.792-4.4 9.792-9.824v-72.864c0-5.424-4.384-9.824-9.792-9.824h-72.384c-5.408 0-9.776 4.4-9.776 9.824v72.864c-0.016 5.408 4.368 9.824 9.776 9.824zM266.784 465.936h-72.704c-5.392 0-9.76 4.4-9.76 9.84v72.848c0 5.44 4.368 9.84 9.76 9.84h72.704c5.408 0 9.776-4.4 9.776-9.84v-72.848c0-5.44-4.368-9.84-9.776-9.84zM266.784 588.368h-72.704c-5.392 0-9.76 4.4-9.76 9.824v72.848c0 5.44 4.368 9.84 9.76 9.84h72.704c5.408 0 9.776-4.4 9.776-9.84v-72.848c0-5.408-4.368-9.824-9.776-9.824zM757.344 435.632h72.368c5.408 0 9.76-4.4 9.76-9.824v-72.864c0-5.424-4.352-9.824-9.76-9.824h-72.368c-5.408 0-9.776 4.4-9.776 9.824v72.864c0 5.408 4.368 9.824 9.776 9.824zM829.904 465.936h-72.704c-5.392 0-9.776 4.4-9.776 9.84v72.848c0 5.44 4.384 9.84 9.776 9.84h72.704c5.424 0 9.76-4.4 9.76-9.84v-72.848c0-5.44-4.336-9.84-9.76-9.84zM829.904 588.368h-72.704c-5.392 0-9.776 4.4-9.776 9.824v72.848c0 5.44 4.384 9.84 9.776 9.84h72.704c5.424 0 9.76-4.4 9.76-9.84v-72.848c0-5.408-4.336-9.824-9.76-9.824zM941.648 435.632h72.384c5.392 0 9.76-4.4 9.76-9.824v-72.864c0-5.424-4.368-9.824-9.76-9.824h-72.384c-5.424 0-9.792 4.4-9.792 9.824v72.864c-0.016 5.408 4.368 9.824 9.792 9.824zM1014.224 465.936h-72.736c-5.376 0-9.76 4.4-9.76 9.84v72.848c0 5.44 4.384 9.84 9.76 9.84h72.736c5.376 0 9.776-4.4 9.776-9.84v-72.848c0-5.44-4.4-9.84-9.776-9.84zM1014.224 588.368h-72.736c-5.376 0-9.76 4.4-9.76 9.824v72.848c0 5.44 4.384 9.84 9.76 9.84h72.736c5.376 0 9.776-4.4 9.776-9.84v-72.848c0-5.408-4.4-9.824-9.776-9.824zM533.008 588.368h-103.44c-5.408 0-9.776 4.4-9.776 9.824v72.848c0 5.44 4.368 9.84 9.776 9.84h103.44c5.408 0 9.776-4.4 9.776-9.84v-72.848c0-5.408-4.384-9.824-9.776-9.824z" />
+        </symbol>
+    </defs>
+</svg>
+<ul id="fixnav" class="flex fixnav">
+    <li class="selected" onClick="HBScroll.VerticalToId('A1',20);"><a href="javascript:void(0);">萌动萝莉</a></li>
+    <li onClick="HBScroll.VerticalToId('A2',20);"><a href="javascript:void(0);">魅惑制服</a></li>
+    <li onClick="HBScroll.VerticalToId('A3',20);"><a href="javascript:void(0);">玉女心经</a></li>
+    <li onClick="HBScroll.VerticalToId('A4',20);"><a href="javascript:void(0);">傲娇御姐</a></li>
+    <li><a href="index.html"><svg class="icon-double11"><use xlink:href="#icon-double11"></use></svg>主会场</a></li>
+</ul>
+<script type="text/javascript" src="js/zepto-1.1.4.min.js"></script>
+<script type="text/javascript">
+    (function browserRedirect() {
+        var iosSrc = "ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=";
+        var androidSrc = "ushengsheng.xjb://splash/m=shop&a=detail&id=";
+        var iosCategory = "ushengsheng.xjb://xingjiabi?m=topic&a=shop&tl=";
+        var andCategory = "ushengsheng.xjb://splash/m=topic&a=shop&tl=";
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var alla = $("#wrap").find("a");
+        var aLength = alla.length;
+        for(var i=0;i<aLength;i++){
+            var thisPId = alla.eq(i).attr("productId");
+            var thisCId = alla.eq(i).attr("categoryId");
+            if(bIsAndroid){
+                alla.eq(i).attr("href",androidSrc+thisPId);
+                if(alla.eq(i).hasClass("has-cid")){
+                    alla.eq(i).attr("href",andCategory+thisCId);
+                }
+            }else{
+                alla.eq(i).attr("href",iosSrc+thisPId);
+                if(alla.eq(i).hasClass("has-cid")){
+                    alla.eq(i).attr("href",iosCategory+thisCId);
+                }
+            }
+        }
+    })();
+</script>
+<script type="text/javascript" src="js/HBScrollTo.min.js"></script>
+<script type="text/javascript" src="js/zepto.scrollLoading.min.js"></script>
+<script type="text/javascript">
+    function addSelected(i){
+        $("#fixnav").find("li").eq(i).addClass("selected").siblings().removeClass("selected");
+    }
+    $(function(){
+        $(".scrollLoading").scrollLoading();
+        var OffsetYA1 = document.getElementById("A1").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA2 = document.getElementById("A2").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA3 = document.getElementById("A3").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA4 = document.getElementById("A4").getBoundingClientRect().top+document.body.scrollTop;
+        window.onscroll = function() {
+            if(document.body.scrollTop>=OffsetYA1-30&&window.scrollY<OffsetYA2){
+                addSelected(0);
+            }
+            if(document.body.scrollTop>=OffsetYA2-30&&window.scrollY<OffsetYA3){
+                addSelected(1);
+            }
+            if(document.body.scrollTop>=OffsetYA3-30&&window.scrollY<OffsetYA4){
+                addSelected(2);
+            }
+            if(document.body.scrollTop>=OffsetYA4-30&&window.scrollY){
+                addSelected(3);
+            }
+        }
+    });
+</script>
+</body>
+</html>

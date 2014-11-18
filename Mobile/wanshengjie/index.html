@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>疯狂万圣节</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <style type="text/css">
+        html {font-size:10px;-webkit-text-size-adjust:100%;}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;}
+        body{width:100%;height:100%;background-color:#e1cf69;}
+        body{font:1.2rem/1.4 Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        :link, :visited , ins{ text-decoration:none ;}
+        img {width: 100%; border: none;vertical-align: middle;}
+        .clearfix:after {content:"\0020";display:block;height:0;visibility:hidden;clear:both;}
+        .clearfix {zoom:1;}
+        .wrap{margin:0 2%;padding-bottom:5rem;}
+        .banner{position:relative;min-height:29.5rem;}
+        .title{background:url(images/titleBg.png) no-repeat;width:21rem;height:5.6rem;display:block;overflow:hidden;text-indent:-9999rem;background-size:21rem;margin:0 auto;position:relative;}
+        .seckill-list{background-color:#990099;margin-top:-3.7rem;padding-top:4.4rem;padding-bottom:1.4rem;border-radius:0.8rem;}
+        .seckill-item{background-color:#ea2aea;margin-top:0.5rem;}
+        .seckill-item-info{background-color:#cc00cc;width:55%;height:100%;float:left;}
+        .seckill-item-img{width:45%;height:100%;float:left;}
+        .seckill-item-box{padding:1rem;}
+        .seckill-item-name{font-size:1.5rem;min-height:4.2rem;color:#fff;font-weight:bold;}
+        .seckill-item-price{text-align:right;color:#fff;font-size:1.2rem;height:3rem;line-height:3rem;font-weight:bold;margin:0.9rem 0;}
+        .seckill-item-price span{font-size:2rem;color:#ffe038;float:left;font-weight:normal;}
+        .seckill-item-price b{text-decoration:line-through;}
+        .seckill-item-buy{display:block;background-color:#ffe038;height:2.8rem;line-height:2.8rem;color:#cc00cc;text-align:center;font-size:1.5rem;}
+        .hot-box,.group-box{padding-top:3rem;}
+        .hot-title{background-position:0 -6.5rem;position:relative;}
+        .hot-list,.group-list{background-color:#044eb4;padding-bottom:2rem;margin-top:-3.7rem;padding-top:4.4rem;border-radius:0.8rem;}
+        .hot-icon{background-position:0 -37.5rem;position:absolute;left:0;top:0;width:4.2rem;height:4rem;}
+        .product-item{width: 47%;overflow: hidden;float: left;background-color: #fff;margin-top:1rem;margin-left:1.5%;}
+        .product-item:nth-child(even){margin-left:3%;}
+        .product-item-b{margin:1rem 1.5% 0 1.5%;width:97%;}
+        .product-item-b:nth-child(even){margin:1rem 1.5% 0 1.5%;}
+        .product-item a {color: #383c3c; text-decoration: none;display:block;}
+        .product-item-img{background:url(images/loading.gif) 50% 50% no-repeat;min-height:1.4rem;}
+        .product-item-img img{display: block;width: 100%;}
+        .item-name{font-size:1.2rem;height:3.3rem;overflow:hidden;text-overflow: ellipsis;}
+        .item-content{padding:0.5rem;}
+        .item-price{text-align:left;}
+        .item-content strong{font-weight: normal;color: #ff3933;font-size:1.7rem;}
+        .item-content span{color:#a3a3a2;font-size:1.2rem;float:right;text-decoration:line-through;padding-top:0.5rem;}
+        .item-content i{color:#ff3933;font-style:normal;float:right;font-size:1.5rem;padding-left:30%;}
+        .hot-list .product-item{position:relative;margin-left:2%;margin-top:0.6rem;}
+        .group-box{padding-top:3rem;}
+        .group-list{background-color:#0f8d02;}
+        .xz-title{background-position:0 -13rem;}
+        .more-box{padding-bottom:2rem;text-align: center;}
+        .more-btn{display: inline-block;text-align: center;margin-top:2.5rem;width:18rem;height:4rem;line-height:4rem;background-color: #7dd106;border-bottom:solid 0.2rem #c88426;color: #fff;font-size:1.8rem;border-radius:0.3rem;overflow: hidden;}
+        .more-btn-1{background-color:#096ffb;border-bottom-color:#085a67;}
+        .more-btn-2{background-color:#27c802;border-bottom-color:#22a201;}
+        .fixnav{position:fixed;bottom:0;left:0;width:100%;z-index:9;background:#fff;filter: Alpha(opacity=90);opacity:0.9;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -o-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+        }
+        .fixnav li{
+            padding:1rem 0;
+            -webkit-flex:auto;
+            flex:auto;
+            -moz-box-flex:1;
+            -webkit-box-flex:1;
+            box-flex:1;
+        }
+        .fixnav a{color:#c302cb;font-size:1.5rem;line-height:2.5rem;border-right:solid 0.1rem #c302cb;display:block;text-align:center;font-weight:bold;}
+        .fixnav li:last-child a{border:0;}
+        .fixnav .selected a{color:#fff;border:0;}
+        .fixnav .selected{background-color:#6a19b9;margin-left:-0.1rem;}
+        .totop a{padding:0 2rem;background:url(images/totop.png) 50% 0.5rem no-repeat;background-size:1.75rem;text-indent:-9999rem;}
+        .footer{}
+        @media screen and (min-width:321px) and (max-width:479px ) {
+            html{font-size:12px;}
+        }
+        @media screen and (min-width:480px) and (max-width:639px ) {
+            html{font-size:15px;}
+        }
+        @media screen and (min-width:640px) and (max-width:719px ) {
+            html{font-size:20px;}
+        }
+        @media screen and (min-width:720px) and (max-width:749px ) {
+            html{font-size:22.5px;}
+        }
+        @media screen and (min-width:750px) and (max-width:799px ) {
+            html{font-size:23.5px;}
+        }
+        @media screen and (min-width:800px) and (max-width:959px ) {
+            html{font-size:25px;}
+        }
+        @media screen and (min-width:960px) and (max-width:1079px ) {
+            html{font-size:30px;}
+        }
+        @media screen and (min-width:1080px) {
+            html{font-size:32px;}
+        }
+    </style>
+</head>
+<body>
+<div class="banner" id="top">
+    <img src="images/banner.jpg" alt="10.29-11.1 疯狂万圣节，群魔乱舞 满158元送舞会面具+微笑振动棒">
+</div>
+<div class="wrap">
+    <div class="seckill-box">
+        <p id="A1" class="title seckill-title">假面派对，天天半价</p>
+        <ul class="seckill-list">
+            <li class="seckill-item clearfix">
+                <div class="seckill-item-info">
+                    <div class="seckill-item-box">
+                        <p class="seckill-item-name">杜蕾斯紧型装送名流小号套（共24只）</p>
+                        <p class="seckill-item-price"><b>¥ 59.00</b><span>¥ 29.00</span></p>
+                        <a class="seckill-item-buy has-p-id" href="javascript:void(0);" productId="940">立即抢购 ></a>
+                    </div>
+                </div>
+                <div class="seckill-item-img">
+                    <img src="images/products/secA1.jpg" alt="杜蕾斯紧型装送名流小号套（共24只）"/>
+                </div>
+            </li>
+            <li class="seckill-item clearfix">
+                <div class="seckill-item-info">
+                    <div class="seckill-item-box">
+                        <p class="seckill-item-name">欧拉拉 液体隐形套<br/>满足零距离的渴望</p>
+                        <p class="seckill-item-price"><b>¥ 38.00</b><span>¥ 15.80</span></p>
+                        <a class="seckill-item-buy has-p-id" href="javascript:void(0);" productId="977">立即抢购 ></a>
+                    </div>
+                </div>
+                <div class="seckill-item-img">
+                    <img src="images/products/secA2.jpg" alt="欧拉拉 液体隐形套满足零距离的渴望"/>
+                </div>
+            </li>
+            <li class="seckill-item clearfix">
+                <div class="seckill-item-info">
+                    <div class="seckill-item-box">
+                        <p class="seckill-item-name">杜蕾斯V焕觉<br/>多速震动棒</p>
+                        <p class="seckill-item-price"><b>¥ 238.00</b><span>¥ 119.00</span></p>
+                        <a class="seckill-item-buy has-p-id" href="javascript:void(0);" productId="289">立即抢购 ></a>
+                    </div>
+                </div>
+                <div class="seckill-item-img">
+                    <img src="images/products/secA3.jpg" alt="杜蕾斯V焕觉多速震动棒"/>
+                </div>
+            </li>
+            <li class="seckill-item clearfix">
+                <div class="seckill-item-info">
+                    <div class="seckill-item-box">
+                        <p class="seckill-item-name">黑豹 延时喷剂 买一送4超值特惠</p>
+                        <p class="seckill-item-price"><b>¥ 216.00</b><span>¥ 108.00</span></p>
+                        <a class="seckill-item-buy has-p-id" href="javascript:void(0);" productId="1143">立即抢购 ></a>
+                    </div>
+                </div>
+                <div class="seckill-item-img">
+                    <img src="images/products/secA4.jpg" alt="黑豹 延时喷剂 买一送4超值特惠"/>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="hot-box">
+        <p id="A2" class="title hot-title">把妹必备，镇店之宝</p>
+        <ul class="hot-list clearfix">
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a class="has-p-id" href="javascript:void(0);" productId="1371">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secB1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">杜蕾斯三合一 19只装<br/>+送倍耐力喷剂</p>
+                        <p class="item-price clearfix"><strong>¥29.90</strong><span>¥108.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a class="has-p-id" href="javascript:void(0);" productId="30">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secB2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">尚牌8合1百变24只装一罐多样 妙不可言</p>
+                        <p class="item-price clearfix"><strong>¥23.90</strong><span>¥59.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a class="has-p-id" href="javascript:void(0);" productId="251">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secB3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">耐氏男用延时喷剂/超久防早泄 正品防伪包装</p>
+                        <p class="item-price clearfix"><strong>¥88.00</strong><span>¥198.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a class="has-p-id" href="javascript:void(0);" productId="769">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secB4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">Connubial 费洛蒙迷情香水 男女用顶级调情</p>
+                        <p class="item-price clearfix"><strong>¥158.00</strong><span>¥398.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a class="has-p-id" href="javascript:void(0);" productId="682">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secB5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">Dibe蒂贝双马达震动LED灯夜光按键隐形穿戴</p>
+                        <p class="item-price clearfix"><strong>¥89.00</strong><span>¥156.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a class="has-p-id" href="javascript:void(0);" productId="1027">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secB6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">连身袜豹纹连身袜</p>
+                        <p class="item-price clearfix"><strong>¥22.00</strong><span>¥49.00</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn more-btn-1 has-c-id" href="javascript:void(0);" categoryId="把妹必备&id=31">查看更多</a>
+        </div>
+    </div>
+    <div class="group-box">
+        <p id="A3" class="title xz-title">组合来袭 万圣套餐</p>
+        <ul class="group-list clearfix">
+            <li class="product-item">
+                <a class="has-p-id" href="javascript:void(0);" productId="904">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">尚牌有礼 40只组合 一惠到底</p>
+                        <p class="item-price clearfix"><strong>¥24.90</strong><span>¥59.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a class="has-p-id" href="javascript:void(0);" productId="1436">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">杜蕾斯超值32只装大胆爱+紧型装</p>
+                        <p class="item-price clearfix"><strong>¥58.00</strong><span>¥89.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item product-item-b">
+                <a class="has-p-id" href="javascript:void(0);" productId="1446">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">捆绑你，戴眼罩，女王皮鞭来调教~<br/>钻石纹眼罩+女王皮鞭+捆绑束缚胶带</p>
+                        <p class="item-price clearfix"><i>立即购买 ></i><strong>¥69.00</strong><span>¥95.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item product-item-b">
+                <a class="has-p-id" href="javascript:void(0);" productId="1170">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">纵享丝滑，丝袜控，今夜你想怎么玩？<br/>大网连体衣+挑逗丝袜+长筒丝袜+开档丝袜+开档露乳网衣</p>
+                        <p class="item-price clearfix"><i>立即购买 ></i><strong>¥89.00</strong><span>¥110.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item product-item-b">
+                <a class="has-p-id" href="javascript:void(0);" productId="1447">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">三十如狼四十如虎，欲壑难填，小心被榨干！<br/>百乐转珠棒+杜蕾斯3片装+尚牌60g润滑油+性感内衣</p>
+                        <p class="item-price clearfix"><i>立即购买 ></i><strong>¥128.00</strong><span>¥185.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item product-item-b">
+                <a class="has-p-id" href="javascript:void(0);" productId="884">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">你就是天使中的魔鬼，再多浓情也喂不饱你的嘴。<br/>百乐变频拉珠+冈本skin至尊10支+强效女用催情助兴液</p>
+                        <p class="item-price clearfix"><i>立即购买 ></i><strong>¥128.00</strong><span>¥166.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item product-item-b">
+                <a class="has-p-id" href="javascript:void(0);" productId="1136">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/secC7.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">修仙性爱之旅，情趣组合，女神标配。<br/>性感包臀裙+变频静音跳蛋+杜蕾斯10片+杜蕾斯润滑剂50ml</p>
+                        <p class="item-price clearfix"><i>立即购买 ></i><strong>¥88.00</strong><span>¥198.00</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn more-btn-2 has-c-id" href="javascript:void(0);" categoryId="套餐来舞&id=32">查看更多</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <img src="images/footer.jpg" alt=""/>
+</div>
+<ul id="fixnav" class="fixnav clearfix">
+    <li class="selected" onClick="HBScroll.VerticalToId('A1',0);"><a href="javascript:void(0);">天天半价</a></li>
+    <li onClick="HBScroll.VerticalToId('A2',0);"><a href="javascript:void(0);">镇店之宝</a></li>
+    <li onClick="HBScroll.VerticalToId('A3',0);"><a href="javascript:void(0);">万圣套餐</a></li>
+    <li onClick="HBScroll.VerticalToId('top',0);" class="totop"><a href="javascript:void(0);">top</a></li>
+</ul>
+<script type="text/javascript" src="js/zepto-1.1.4.min.js"></script>
+<script type="text/javascript">
+    (function browserRedirect() {
+        var iosSrc = "ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=";
+        var androidSrc = "ushengsheng.xjb://splash/m=shop&a=detail&id=";
+        var iosCategory = "ushengsheng.xjb://xingjiabi?m=topic&a=shop&tl=";
+        var andCategory = "ushengsheng.xjb://splash/m=topic&a=shop&tl=";
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var aLength = $("a").length;
+        for(var i=0;i<aLength;i++){
+            var thisPId = $("a").eq(i).attr("productId");
+            var thisCId = $("a").eq(i).attr("categoryId");
+            if(bIsAndroid){
+                if($("a").eq(i).hasClass("has-c-id")){
+                    $("a").eq(i).attr("href",andCategory+thisCId);
+                }else{
+                    $("a").eq(i).attr("href",androidSrc+thisPId);
+                }
+            }else{
+                if($("a").eq(i).hasClass("has-c-id")){
+                    $("a").eq(i).attr("href",iosCategory+thisCId);
+                }else{
+                    $("a").eq(i).attr("href",iosSrc+thisPId);
+                }
+            }
+        }
+    })();
+</script>
+<script type="text/javascript" src="js/HBScrollTo.js"></script>
+<script type="text/javascript" src="js/zepto.scrollLoading.js"></script>
+<script type="text/javascript">
+    function addSelected(i){
+        $("#fixnav").find("li").eq(i).addClass("selected").siblings().removeClass("selected");
+    }
+    $(function(){
+        $(".scrollLoading").scrollLoading();
+        var OffsetYA1 = document.getElementById("A1").getBoundingClientRect().top+document.body.scrollTop,
+                OffsetYA2 = document.getElementById("A2").getBoundingClientRect().top+document.body.scrollTop,
+                OffsetYA3 = document.getElementById("A3").getBoundingClientRect().top+document.body.scrollTop;
+        window.onscroll = function() {
+            if(document.body.scrollTop>=OffsetYA1-30&&window.scrollY<OffsetYA2){
+                addSelected(0);
+            }
+            if(document.body.scrollTop>=OffsetYA2-30&&window.scrollY<OffsetYA3){
+                addSelected(1);
+            }
+            if(document.body.scrollTop>=OffsetYA3-50&&window.scrollY){
+                addSelected(2);
+            }
+        }
+    });
+</script>
+</body>
+</html>

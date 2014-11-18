@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>爱在秋季</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <style type="text/css">
+        html {font-size:10px;-webkit-text-size-adjust:100%;}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;}
+        body{width:100%;height:100%;background:url(images/bodyBg.gif) repeat-y;background-size:contain;}
+        body{font:1.2rem/1.4 Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        :link, :visited , ins{ text-decoration:none ;}
+        img {width: 100%; border: none;vertical-align: middle;}
+        @-webkit-keyframes navAnchor{
+            0% {
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
+            100% {
+                background-color:#db291e;}
+        }
+        @-ms-keyframes navAnchor{
+            0% {
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
+            100% {
+                background-color:#db291e;}
+        }
+        @keyframes navAnchor{
+            0% {
+                background-color:#db291e;}
+            50% {
+                background-color:#993333;}
+            100% {
+                background-color:#db291e;}
+        }
+        .clearfix:after {content:"\0020";display:block;height:0;visibility:hidden;clear:both;}
+        .clearfix {zoom:1;}
+        .wrap{margin:0 2%;padding-bottom:5rem;}
+        .banner{position:relative;min-height:25rem;}
+        .banner a{position:absolute;width:8.5rem;height:2.8rem;top:14.5rem;right:4.8rem;overflow:hidden;text-indent:-9999rem;}
+        .title{background:url(images/titleBg.png) no-repeat;width:18rem;height:5rem;display:block;overflow:hidden;text-indent:-9999rem;background-size:21rem;margin:0 auto;}
+        .hot-title{background-position:0 -7.5rem;position:relative;}
+        .hot-list{background-color:#db291e;padding-top:3rem;padding-bottom:2rem;margin-top:-2.3rem;}
+        .hot-icon{background-position:0 -37.5rem;position:absolute;left:0;top:0;width:4.2rem;height:4rem;}
+        .product-item{width: 47%;overflow: hidden;float: left;background-color: #fff;margin-top:1rem;margin-left:1.5%;}
+        .product-item:nth-child(even){margin-left:3%;}
+        .product-item a {color: #383c3c; text-decoration: none;}
+        .product-item-img{background:url(images/loading.gif) 50% 50% no-repeat;background-size:6.4rem 6.4rem;min-height:14rem;overflow:hidden;}
+        .product-item-img img{display: block;width: 100%;}
+        .item-name{font-size:1.2rem;height:3.3rem;overflow:hidden;text-overflow: ellipsis;}
+        .item-content{padding:0.5rem;}
+        .item-price{text-align:left;}
+        .item-content strong{font-weight: normal;color: #ff3933;font-size:1.7rem;}
+        .item-content span{color:#a3a3a2;font-size:1.2rem;float:right;text-decoration:line-through;padding-top:0.5rem;}
+        .hot-list .product-item{position:relative;margin-left:2%;margin-top:0.6rem;}
+        .product-box{padding-top:3rem;}
+        .product-list{padding-bottom:2rem;}
+        .xz-title{background-position:0 -15rem;}
+        .wa-title{background-position:0 -22rem;}
+        .cd-title{background-position:0 -29.5rem;}
+        .more-box{padding-bottom:2rem;text-align: center;}
+        .more-btn{display: inline-block;text-align: center;width:18rem;height:4rem;line-height:4rem;background-color: #7dd106;border-bottom:solid 0.2rem #b7b73b;color: #fff;font-size:1.8rem;border-radius:0.3rem;overflow: hidden;}
+        .more-btn-wa{background-color: #06dc93;border-bottom: solid 0.2rem #95b748;}
+        .more-btn-cd{background-color: #0487eb;border-bottom: solid 0.2rem #716d36;}
+        .fixnav{position:fixed;bottom:0;left:0;width:100%;z-index:9;background:#fff;filter: Alpha(opacity=90);opacity:0.9;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -o-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+        }
+        .fixnav li{
+            padding:1rem 0;
+            -webkit-flex:auto;
+            flex:auto;
+            -moz-box-flex:1;
+            -webkit-box-flex:1;
+            box-flex:1;
+        }
+        .fixnav a{color:#993333;font-size:1.2rem;line-height:1.2rem;border-right:solid 0.1rem #993333;display:block;text-align:center;font-weight:bold;}
+        .fixnav li:last-child a{border:0;}
+        .fixnav .selected a{color:#fff;border:0;}
+        .fixnav .selected{background-color:#db291e;margin-left:-0.1rem;-webkit-animation:navAnchor 2s linear infinite;animation:navAnchor 2s linear infinite;}
+        .totop a{height:2.4rem;background:url(images/sprite.png) 2.5rem -12.2rem no-repeat;background-size:13rem;text-indent:-9999rem;}
+        .popup-content dl{padding-top:1.2rem;}
+        .popup-content p{padding:0.2rem 0;}
+        @media screen and (min-width:321px) and (max-width:479px ) {
+            html{font-size:12px;}
+        }
+        @media screen and (min-width:480px) and (max-width:639px ) {
+            html{font-size:15px;}
+        }
+        @media screen and (min-width:640px) and (max-width:719px ) {
+            html{font-size:20px;}
+        }
+        @media screen and (min-width:720px) and (max-width:749px ) {
+            html{font-size:22.5px;}
+        }
+        @media screen and (min-width:750px) and (max-width:799px ) {
+            html{font-size:23.5px;}
+        }
+        @media screen and (min-width:800px) and (max-width:959px ) {
+            html{font-size:25px;}
+        }
+        @media screen and (min-width:960px) and (max-width:1079px ) {
+            html{font-size:30px;}
+        }
+        @media screen and (min-width:1080px) {
+            html{font-size:32px;}
+        }
+    </style>
+</head>
+<body>
+<div class="banner" id="top">
+    <img src="images/banner.jpg" alt="爱在秋季-情谊'日'久天长 10.22-10.25">
+</div>
+<div class="wrap">
+    <div class="hot-box">
+        <p id="A1" class="title hot-title">明星产品</p>
+        <ul class="hot-list clearfix">
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1027">
+                    <p class="product-item-img">
+                        <img src="images/products/hot1.jpg" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">连体衣狂野豹纹连身全身开裆丝袜</p>
+                        <p class="item-price clearfix"><strong>¥28.00</strong><span>¥49.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=30">
+                    <p class="product-item-img">
+                        <img src="images/products/hot2.jpg" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">尚牌8合1百变24只装 一罐多样 妙不可言您hold得住吗</p>
+                        <p class="item-price clearfix"><strong>¥26.00</strong><span>¥59.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=968">
+                    <p class="product-item-img">
+                        <img src="images/products/hot3.jpg" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">效催性助情 女用兴奋液外用 摧性欲高潮喷剂凝露 </p>
+                        <p class="item-price clearfix"><strong>¥39.00</strong><span>¥69.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <i class="title hot-icon"></i>
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=781">
+                    <p class="product-item-img">
+                        <img src="images/products/hot4.jpg" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">恒天宝隆3D美臀实体逼真阴臀倒模</p>
+                        <p class="item-price clearfix"><strong>¥99.00</strong><span>¥199.00</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="product-box">
+        <p id="A2" class="title xz-title">秋水一波</p>
+        <ul class="product-list clearfix">
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1356">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">杰士邦 love+自由派 10+3只捆绑装 安全套</p>
+                        <p class="item-price clearfix"><strong>¥22.00</strong><span>¥47.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1387">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">诺丝   超霸持久型（2盒共12只）</p>
+                        <p class="item-price clearfix"><strong>¥39.00</strong><span>¥97.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=27">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">白金003  冈本安全套/避孕套超薄</p>
+                        <p class="item-price clearfix"><strong>¥72.00</strong><span>¥128.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=866">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">第六感 六合一安全套24只装 多样组合</p>
+                        <p class="item-price clearfix"><strong>¥19.00</strong><span>¥38.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1023">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">正品尚牌 三款润滑 阴交肛交调情按摩</p>
+                        <p class="item-price clearfix"><strong>¥22.00</strong><span>¥59.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=17">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">杜蕾斯冰火快感人体润滑液 50ml</p>
+                        <p class="item-price clearfix"><strong>¥29.90</strong><span>¥59.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=70">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz7.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">日本进口外用延时喷剂 不麻木持久防早泄外用喷雾</p>
+                        <p class="item-price clearfix"><strong>¥168.00</strong><span>¥198.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1176">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/xz8.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">正品 浓情蜜液二代女外用喷剂 调情高潮液</p>
+                        <p class="item-price clearfix"><strong>¥20.00</strong><span>¥65.00</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn" href="ushengsheng.xjb://xingjiabi?m=topic&a=shop&tl=兴致勃勃&id=18">查看更多</a>
+        </div>
+    </div>
+    <div class="product-box">
+        <p id="A3" class="title wa-title">秋意盎然</p>
+        <ul class="product-list clearfix">
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=361">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa1.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">12频幻彩迷你长短组合双震双跳蛋</p>
+                        <p class="item-price clearfix"><strong>¥32.00</strong><span>¥68.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=861">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa2.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">百乐派蒂菈双重刺激震动棒时尚款</p>
+                        <p class="item-price clearfix"><strong>¥88.00</strong><span>¥199.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=970">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa3.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">甜美优雅蕾丝花边连体衣 性感镂空捆绑套装</p>
+                        <p class="item-price clearfix"><strong>¥29.00</strong><span>¥99.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1122">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa4.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">高档蕾丝网纱深V诱惑情趣内衣外套+吊带+T裤</p>
+                        <p class="item-price clearfix"><strong>¥56.00</strong><span>¥106.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=796">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa5.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">恒天宝隆一键制霸全身防水美国动力转珠棒</p>
+                        <p class="item-price clearfix"><strong>¥49.00</strong><span>¥128.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1021">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa6.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">selebritee高档无缝情趣内衣</p>
+                        <p class="item-price clearfix"><strong>¥39.00</strong><span>¥76.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=831">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa7.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">韩国Spider Man黑白蜘蛛侠吸附式飞机杯</p>
+                        <p class="item-price clearfix"><strong>¥128.00</strong><span>¥299.00</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-item">
+                <a href="ushengsheng.xjb://xingjiabi?m=shop&a=detail&id=1036">
+                    <p class="product-item-img">
+                        <img class="scrollLoading" data-url="images/products/wa8.jpg" src="images/space.gif" alt="" />
+                    </p>
+                    <div class="item-content">
+                        <p class="item-name">名模露露一比一真人阴臀倒模 </p>
+                        <p class="item-price clearfix"><strong>¥168.00</strong><span>¥299.00</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="more-box">
+            <a class="more-btn more-btn-wa" href="ushengsheng.xjb://xingjiabi?m=topic&a=shop&tl=无爱不欢&id=24">查看更多</a>
+        </div>
+    </div>
+</div>
+<ul id="fixnav" class="fixnav">
+    <li class="selected" onClick="HBScroll.VerticalToId('A1',0);"><a href="javascript:void(0);">明星<br/>产品</a></li>
+    <li onClick="HBScroll.VerticalToId('A2',0);"><a href="javascript:void(0);">秋水<br/>一波</a></li>
+    <li onClick="HBScroll.VerticalToId('A3',0);"><a href="javascript:void(0);">秋意<br/>盎然</a></li>
+    <li onClick="HBScroll.VerticalToId('top',0);" class="totop"><a href="javascript:void(0);">top</a></li>
+</ul>
+<script type="text/javascript" src="js/zepto-1.1.4.min.js"></script>
+<script type="text/javascript" src="js/HBScrollTo.js"></script>
+<script type="text/javascript" src="js/zepto.scrollLoading.js"></script>
+<script type="text/javascript">
+    function addSelected(i){
+        $("#fixnav").find("li").eq(i).addClass("selected").siblings().removeClass("selected");
+    }
+    $(function(){
+        $(".scrollLoading").scrollLoading();
+        var OffsetYA1 = document.getElementById("A1").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA2 = document.getElementById("A2").getBoundingClientRect().top+document.body.scrollTop,
+            OffsetYA3 = document.getElementById("A3").getBoundingClientRect().top+document.body.scrollTop;
+        window.onscroll = function() {
+            if(document.body.scrollTop>=OffsetYA1-30&&window.scrollY<OffsetYA2){
+                addSelected(0);
+            }
+            if(document.body.scrollTop>=OffsetYA2-30&&window.scrollY<OffsetYA3){
+                addSelected(1);
+            }
+            if(document.body.scrollTop>=OffsetYA3-50&&window.scrollY){
+                addSelected(2);
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; border:0; outline:0;}
+ol, ul, li{list-style:none;}
+address, caption, cite, code, dfn, em, th, var {font-style:normal;font-weight:normal;}
+/*form*/
+form label{cursor:pointer}
+input, button, textarea{font-family:inherit; font-size:100%}
+h2 { margin-bottom: 15px;  font-size: 17px; color: #333;}
+body{ background:#ffe;}
+
+.app-list li { padding: 10px; font-size: 17px; border-top: 1px solid #FFF; border-bottom: 1px solid #E6E3DC; background: -webkit-gradient(linear, left top, left bottom, from(#FFFDF6), to(#F7F4EB));}
+.app-list li a { display: block; margin: -10px -10px -11px; padding: inherit; color: inherit; text-decoration: inherit; color: #333; overflow: hidden;}
+.app-list .e-l-i { padding-right: 35px; background: url(../images/chevron.png) right center no-repeat;}
+.app-list .d-item { overflow: hidden;}
+.app-list .d-item figure { float: left; width: 60px; height: 60px; overflow: hidden;}
+.app-list .d-item article { margin-left: 75px;}
+.app-list .d-item h2,.d-item p { margin-bottom: 2px;}
+.app-list .d-item .introduce { color: #919191;}
